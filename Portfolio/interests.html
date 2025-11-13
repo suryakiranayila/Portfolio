@@ -1,64 +1,106 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interests | Ayila Surya Kiran</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Interests | Ayila Surya Kiran</title>
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    <nav class="navbar">
-        <div class="nav-logo"><a href="index.html">SK<span>.</span></a></div>
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="education.html">Education</a></li>
-            <li><a href="achievements.html">Achievements</a></li>
-            <li><a href="interests.html">Interests</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="Resume.pdf" target="_blank" class="nav-resume-btn">Resume</a></li>
-        </ul>
+  <!-- Navbar -->
+  <header class="navbar" role="navigation" aria-label="Primary">
+    <div class="nav-left">
+      <a class="nav-logo" href="index.html">SK<span class="dot">.</span></a>
+    </div>
+
+    <nav class="nav-center" aria-label="Main navigation">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="education.html">Education</a></li>
+        <li><a href="achievements.html">Achievements</a></li>
+        <li><a href="interests.html">Interests</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
     </nav>
-    <main class="container">
-        <h1 class="section-heading">Creative Pursuits</h1>
-        <section id="creative-skills">
-            <h2>UI/UX Design & Web Development</h2>
-            <p>Beyond data, I am passionate about building robust, responsive websites and crafting visually appealing, intuitive interfaces that enhance user satisfaction and engagement. I turn creative ideas into functional digital experiences using tools like Figma and Framer, alongside HTML, CSS, and JavaScript.</p>
-        </section>
-        <section id="photography" style="margin-top: 4rem;">
-            <h2>Freelancing in Content Creation</h2>
-            <p>I also freelance in creating visual content, including posters, photo editing, and other multimedia assets. Below is a sample gallery representing this work.</p>
-            <div class="masonry-grid">
-                <div class="masonry-item">
-                    <img src="images/photo1.jpg" alt="One">
-                    <div class="masonry-overlay"><h4>One</h4></div>
-                </div>
-                <div class="masonry-item">
-                    <img src="images/photo2.jpg" alt="Two">
-                    <div class="masonry-overlay"><h4>Two</h4></div>
-                </div>
-                <div class="masonry-item">
-                    <img src="images/photo3.jpg" alt="Three">
-                    <div class="masonry-overlay"><h4>Three</h4></div>
-                </div>
-                <div class="masonry-item">
-                    <img src="images/photo4.jpg" alt="Four">
-                    <div class="masonry-overlay"><h4>Four</h4></div>
-                </div>
-                 <div class="masonry-item">
-                    <img src="images/photo5.jpg" alt="Five">
-                    <div class="masonry-overlay"><h4>Five</h4></div>
-                </div>
-                 <div class="masonry-item">
-                    <img src="images/photo6.jpg" alt="Six">
-                    <div class="masonry-overlay"><h4>Six</h4></div>
-                </div>
-            </div>
-        </section>
-    </main>
-    <footer class="footer">
-        <p>Designed & Built by Ayila Surya Kiran &copy; 2025</p>
-    </footer>
-    <script src="script.js" defer></script>
+
+    <div class="nav-right">
+      <a class="nav-resume-btn" href="Resume.pdf" target="_blank" rel="noopener">Resume</a>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main id="main" class="container" style="padding-top:140px;">
+    <h1 class="section-heading">Creative Pursuits</h1>
+
+    <p class="muted" style="max-width:760px;">
+      Outside Data Science and AI engineering, I explore <strong>UI/UX design, web development,</strong> and 
+      <strong>creative content work</strong> such as photo editing and visual storytelling.  
+      Here is a short gallery of my photography & design experiments.
+    </p>
+
+    <section id="photography" style="margin-top: 2rem;">
+      <div class="masonry-grid">
+        <div class="masonry-item">
+          <img src="images/photo1.jpg" alt="Creative photo sample 1">
+          <div class="masonry-overlay"><h4>One</h4></div>
+        </div>
+
+        <div class="masonry-item">
+          <img src="images/photo2.jpg" alt="Creative photo sample 2">
+          <div class="masonry-overlay"><h4>Two</h4></div>
+        </div>
+
+        <div class="masonry-item">
+          <img src="images/photo3.jpg" alt="Creative photo sample 3">
+          <div class="masonry-overlay"><h4>Three</h4></div>
+        </div>
+
+        <div class="masonry-item">
+          <img src="images/photo4.jpg" alt="Creative photo sample 4">
+          <div class="masonry-overlay"><h4>Four</h4></div>
+        </div>
+
+        <div class="masonry-item">
+          <img src="images/photo5.jpg" alt="Creative photo sample 5">
+          <div class="masonry-overlay"><h4>Five</h4></div>
+        </div>
+
+        <div class="masonry-item">
+          <img src="images/photo6.jpg" alt="Creative photo sample 6">
+          <div class="masonry-overlay"><h4>Six</h4></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <p>Designed &amp; Built by Ayila Surya Kiran • &copy; 2025</p>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+
+  <!-- Active Link Fallback -->
+  <script>
+    (function() {
+      const links = document.querySelectorAll('.nav-links a');
+      const file = location.pathname.split('/').pop() || 'index.html';
+
+      links.forEach(a => {
+        const href = (a.getAttribute('href') || '').split('/').pop();
+        if (href === file) {
+          a.classList.add('active');
+          a.setAttribute('aria-current', 'page');
+        }
+      });
+    })();
+  </script>
 </body>
 </html>

@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects | Ayila Surya Kiran</title>
+    <title>Interests | Ayila Surya Kiran</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
+
     <nav class="navbar">
         <div class="nav-logo"><a href="index.html">SK<span>.</span></a></div>
         <ul class="nav-links">
@@ -15,100 +15,68 @@
             <li><a href="projects.html">Projects</a></li>
             <li><a href="education.html">Education</a></li>
             <li><a href="achievements.html">Achievements</a></li>
-            <li><a href="interests.html">Interests</a></li>
+            <li><a href="interests.html" class="active">Interests</a></li>
             <li><a href="contact.html">Contact</a></li>
             <li><a href="Resume.pdf" target="_blank" class="nav-resume-btn">Resume</a></li>
         </ul>
     </nav>
+
     <main class="container">
-        <h1 class="section-heading">Projects</h1>
-        <p>A collection of my work in AI, development, and beyond. Click the tags to filter.</p>
-        <div class="filter-buttons">
-            <button class="filter-btn active" data-filter="all">All</button>
-            <button class="filter-btn" data-filter="ai">AI/ML</button>
-            <button class="filter-btn" data-filter="web">Web Tools</button>
-        </div>
-        <div class="project-grid">
-            <div class="project-card" data-category="ai">
-                <div class="project-image">
-                    <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=2070&auto=format&fit=crop" alt="Career development platform">
+        <h1 class="section-heading">Creative Pursuits</h1>
+
+        <!-- UI/UX & Development -->
+        <section id="creative-skills">
+            <h2>UI/UX Design & Web Development</h2>
+            <p>
+                Alongside my work in Data Science and AI, I have a strong interest in crafting intuitive, user-centered digital experiences. 
+                I enjoy turning ideas into clean, functional interfaces through tools like <b>Figma, Framer, Photoshop</b>, and front-end technologies 
+                like <b>HTML, CSS, and JavaScript</b>.  
+                My design process blends creativity with structured thinking—ensuring every interface is purposeful, engaging, and visually coherent.
+            </p>
+        </section>
+
+        <!-- Photography & Content Creation -->
+        <section id="photography" style="margin-top: 4rem;">
+            <h2>Freelancing & Creative Content</h2>
+            <p>
+                I also freelance in visual content creation—designing posters, editing photos, and producing multimedia assets for campus clubs, events, 
+                and small clients.  
+                Photography, design, and storytelling are my creative outlets, and below is a small gallery showcasing some of my work.
+            </p>
+
+            <div class="masonry-grid">
+                <div class="masonry-item">
+                    <img src="images/photo1.jpg" alt="One">
+                    <div class="masonry-overlay"><h4>One</h4></div>
                 </div>
-                <div class="project-content">
-                    <h3>Know2Grow</h3>
-                    <p class="project-description">An AI-powered career development platform under development, offering career exploration, resume enhancement, and interview preparation.</p>
-                    <div class="project-tags">
-                        <span>AI</span><span>Career Development</span><span>Python</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="#" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-                    </div>
+                <div class="masonry-item">
+                    <img src="images/photo2.jpg" alt="Two">
+                    <div class="masonry-overlay"><h4>Two</h4></div>
                 </div>
-            </div>
-            <div class="project-card" data-category="web">
-                <div class="project-image">
-                    <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=1911&auto=format&fit=crop" alt="Expense tracker app">
+                <div class="masonry-item">
+                    <img src="images/photo3.jpg" alt="Three">
+                    <div class="masonry-overlay"><h4>Three</h4></div>
                 </div>
-                <div class="project-content">
-                    <h3>Smart Expense Tracker</h3>
-                    <p class="project-description">Building an AI-fied web tracker to smartly split expenses among group members, where splitting is done as per individual user's expenses.</p>
-                    <div class="project-tags">
-                        <span>AI</span><span>Web App</span><span>JavaScript</span><span>HTML/CSS</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="#" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-                    </div>
+                <div class="masonry-item">
+                    <img src="images/photo4.jpg" alt="Four">
+                    <div class="masonry-overlay"><h4>Four</h4></div>
                 </div>
-            </div>
-            <div class="project-card" data-category="ai">
-                <div class="project-image">
-                    <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?q=80&w=2070&auto=format&fit=crop" alt="Stock market chart">
+                <div class="masonry-item">
+                    <img src="images/photo5.jpg" alt="Five">
+                    <div class="masonry-overlay"><h4>Five</h4></div>
                 </div>
-                <div class="project-content">
-                    <h3>Stock Analysis & Forecast</h3>
-                    <p class="project-description">Project analyzing and forecasting stock market trends for informed investment decisions. Currently focusing on a single stock with plans for expansion.</p>
-                    <div class="project-tags">
-                        <span>Data Science</span><span>Forecasting</span><span>Python</span><span>Pandas</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="#" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-                    </div>
+                <div class="masonry-item">
+                    <img src="images/photo6.jpg" alt="Six">
+                    <div class="masonry-overlay"><h4>Six</h4></div>
                 </div>
             </div>
-            <div class="project-card" data-category="ai">
-                <div class="project-image">
-                    <img src="https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?q=80&w=1906&auto=format&fit=crop" alt="Social media bots">
-                </div>
-                <div class="project-content">
-                    <h3>Automated Social Media Bots</h3>
-                    <p class="project-description">Developed bots providing daily insights to social media. Includes "Cars Info" for auto enthusiasts and "Python Learn" for programmers.</p>
-                    <div class="project-tags">
-                        <span>Automation</span><span>Python</span><span>APIs</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="#" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="project-card" data-category="ai">
-                <div class="project-image">
-                    <img src="https://images.unsplash.com/photo-1517404215738-15263e9f9178?q=80&w=2070&auto=format&fit=crop" alt="Map with routes">
-                </div>
-                <div class="project-content">
-                    <h3>Traveling Salesman Optimization</h3>
-                    <p class="project-description">An optimization project to find the most efficient route for a salesperson visiting multiple cities, solving a classic computer science problem.</p>
-                    <div class="project-tags">
-                        <span>Algorithms</span><span>Optimization</span><span>C++</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="#" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
+        </section>
     </main>
+
     <footer class="footer">
         <p>Designed & Built by Ayila Surya Kiran &copy; 2025</p>
     </footer>
+
     <script src="script.js" defer></script>
 </body>
 </html>

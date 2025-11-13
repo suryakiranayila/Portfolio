@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Poppins:wght@600;700&display=swap');
+
 :root {
     --dark-bg: #2f1c0a;
     --light-dark-bg: #402c11;
@@ -13,6 +14,7 @@
     --border-radius: 8px;
     --transition-speed: 0.3s;
 }
+
 /* --- General Body & Reset --- */
 * {
     margin: 0;
@@ -29,7 +31,9 @@ body {
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    min-height: 100vh;
 }
+
 /* --- Typography --- */
 h1, h2, h3, h4, h5, h6 {
     color: var(--light-text);
@@ -43,15 +47,19 @@ h3 { font-size: 1.5rem; }
 p {
     margin-bottom: 1rem;
     max-width: 70ch;
+    color: var(--slate-text);
 }
 a {
     color: var(--accent-tech);
     text-decoration: none;
     transition: color var(--transition-speed) ease;
 }
-a:hover {
+a:hover,
+a:focus {
     color: var(--accent-art);
+    outline: none;
 }
+
 /* --- Container & Section Headings --- */
 .container {
     max-width: 1100px;
@@ -74,6 +82,8 @@ a:hover {
     margin-left: 20px;
     background-color: var(--lightest-dark-bg);
 }
+
+/* --- Buttons --- */
 .btn {
     display: inline-block;
     padding: 0.75rem 1.5rem;
@@ -84,12 +94,17 @@ a:hover {
     font-size: 1rem;
     cursor: pointer;
     transition: all var(--transition-speed) ease;
+    background: transparent;
 }
-.btn:hover {
-    background-color: rgba(48, 34, 10, 0.8);
-    color: var(--accent-tech);
+.btn:hover,
+.btn:focus {
+    background-color: rgba(255,177,100,0.08);
+    transform: translateY(-2px);
+    color: var(--accent-art);
+    outline: none;
 }
-/* --- Navigation Bar --- */
+
+/* --- Navbar: original visuals + safe column helper --- */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -102,8 +117,29 @@ a:hover {
     z-index: 100;
     background-color: rgba(48, 34, 10, 0.8);
     backdrop-filter: blur(10px);
-    transition: top 0.3s;
+    transition: transform 220ms ease, background-color var(--transition-speed);
+    transform: translateY(0);
 }
+
+/* Non-destructive column helper for pages that use nav-left/nav-center/nav-right */
+.nav-left, .nav-center, .nav-right {
+    display: flex;
+    align-items: center;
+}
+.nav-center {
+    flex: 1 1 auto;
+    justify-content: center;
+}
+.nav-left, .nav-right {
+    flex: 0 0 auto;
+}
+
+/* Optional: hide navbar via data-hidden attribute toggled by JS */
+.navbar[data-hidden="true"] {
+    transform: translateY(-110%);
+}
+
+/* logo */
 .nav-logo a {
     font-family: var(--font-heading);
     font-weight: 700;
@@ -112,6 +148,7 @@ a:hover {
 }
 .nav-logo a span { color: var(--accent-tech); }
 
+/* nav links */
 .nav-links {
     list-style: none;
     display: flex;
@@ -119,17 +156,24 @@ a:hover {
     gap: 1.5rem;
 }
 .nav-links li {
-    margin: 0; /* Reset margin from previous attempts */
+    margin: 0;
 }
-
 .nav-links a {
     font-weight: 500;
     padding: 0.5rem 0;
+    color: inherit;
+    transition: color var(--transition-speed) ease, border-color var(--transition-speed) ease;
 }
 .nav-links a.active {
     color: var(--accent-art);
     border-bottom: 2px solid var(--accent-art);
 }
+.nav-links a:focus {
+    outline: 2px dashed rgba(255,177,100,0.25);
+    outline-offset: 4px;
+}
+
+/* resume button */
 .nav-resume-btn {
     display: inline-block;
     padding: 0.5rem 1rem;
@@ -140,11 +184,15 @@ a:hover {
     font-size: 0.9rem;
     cursor: pointer;
     transition: all var(--transition-speed) ease;
+    background: transparent;
 }
-.nav-resume-btn:hover {
-    background-color: rgba(48, 34, 10, 0.8);
+.nav-resume-btn:hover,
+.nav-resume-btn:focus {
+    background-color: rgba(255, 177, 100, 0.08);
     color: var(--accent-tech);
+    outline: none;
 }
+
 /* --- Hero Section (index.html) --- */
 .hero {
     min-height: 100vh;
@@ -189,6 +237,7 @@ a:hover {
 }
 .hero-content .accent-tech { color: var(--accent-tech); }
 .hero-content .accent-art { color: var(--accent-art); }
+
 /* --- About Section Snippet (index.html) --- */
 .about-snippet {
     display: grid;
@@ -200,6 +249,7 @@ a:hover {
     max-width: 300px;
     position: relative;
     border-radius: var(--border-radius);
+    overflow: hidden;
 }
 .about-image::after {
     content: '';
@@ -211,7 +261,7 @@ a:hover {
     top: 15px;
     left: 15px;
     z-index: -1;
-    transition: var(--transition-speed);
+    transition: top var(--transition-speed) ease, left var(--transition-speed) ease;
 }
 .about-image:hover::after {
     top: 10px;
@@ -220,12 +270,12 @@ a:hover {
 .about-image img {
     width: 100%;
     border-radius: var(--border-radius);
-    filter: normal(100%) contrast(1);
-    transition: var(--transition-speed);
+    transition: transform var(--transition-speed) ease, filter var(--transition-speed) ease;
+    display: block;
 }
 .about-image:hover img {
-    mix-blend-mode: darken;
-    filter: darken(25%) contrast(0.75);
+    transform: translateY(-4px);
+    filter: brightness(0.95) contrast(0.95);
 }
 
 /* --- Featured Grid (index.html) --- */
@@ -240,6 +290,9 @@ a:hover {
     padding: 2rem;
     border-radius: var(--border-radius);
     transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+    display: flex;
+    flex-direction: column;
+    min-height: 220px;
 }
 .featured-card:hover {
     transform: translateY(-10px);
@@ -252,6 +305,28 @@ a:hover {
 }
 .featured-card h3 {
     color: var(--light-text);
+}
+
+/* --- Services / What I Do --- */
+.services-grid {
+    display: grid;
+    gap: 18px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+.service-card {
+    background-color: var(--light-dark-bg);
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+}
+.service-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 24px rgba(2,12,27,0.55);
+}
+.service-ic {
+    color: var(--accent-tech);
+    font-size: 2rem;
+    margin-bottom: 0.75rem;
 }
 
 /* --- Projects Page --- */
@@ -270,9 +345,12 @@ a:hover {
     cursor: pointer;
     transition: all var(--transition-speed);
 }
-.filter-btn:hover, .filter-btn.active {
+.filter-btn:hover,
+.filter-btn.active,
+.filter-btn:focus {
     background-color: var(--accent-tech);
     color: var(--dark-bg);
+    outline: none;
 }
 
 .project-grid {
@@ -286,7 +364,12 @@ a:hover {
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    transition: transform var(--transition-speed) ease;
+    transition: transform var(--transition-speed) ease, opacity var(--transition-speed) ease;
+}
+.project-card.hidden {
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(0.98);
 }
 .project-card:hover {
     transform: translateY(-5px);
@@ -296,10 +379,12 @@ a:hover {
     height: 200px;
     object-fit: cover;
     filter: grayscale(50%);
-    transition: filter var(--transition-speed);
+    transition: filter var(--transition-speed) ease, transform var(--transition-speed) ease;
+    display: block;
 }
 .project-card:hover .project-image img {
     filter: grayscale(0%);
+    transform: scale(1.02);
 }
 .project-content {
     padding: 1.5rem;
@@ -337,6 +422,7 @@ a:hover {
 .project-links a:hover {
     color: var(--accent-tech);
 }
+
 /* --- Education Timeline --- */
 .timeline {
     position: relative;
@@ -421,6 +507,7 @@ a:hover {
     font-style: italic;
     margin-bottom: 0.5rem;
 }
+
 /* --- Achievements Page --- */
 .achievements-section {
     margin-bottom: 3rem;
@@ -443,6 +530,7 @@ a:hover {
     color: var(--light-text);
     display: block;
 }
+
 /* --- Interests Page (Photo Grid) --- */
 .masonry-grid {
     column-count: 3;
@@ -485,6 +573,7 @@ a:hover {
     color: white;
     margin: 0;
 }
+
 /* --- Contact Page --- */
 .contact-grid {
     display: grid;
@@ -510,6 +599,7 @@ a:hover {
 .contact-form textarea:focus {
     outline: none;
     border-color: var(--accent-tech);
+    box-shadow: 0 0 0 4px rgba(255,177,100,0.06);
 }
 .contact-info ul {
     list-style: none;
@@ -525,6 +615,7 @@ a:hover {
     color: var(--accent-tech);
     margin-right: 1.5rem;
 }
+
 /* --- Footer --- */
 .footer {
     text-align: center;
@@ -539,6 +630,7 @@ a:hover {
 .footer a:hover {
     color: var(--accent-tech);
 }
+
 /* --- Responsive Design --- */
 @media (max-width: 1024px) {
     .about-snippet {

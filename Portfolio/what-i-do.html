@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>What I Do | Ayila Surya Kiran</title>
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="navbar" role="navigation" aria-label="Primary">
+    <div class="nav-left">
+      <a class="nav-logo" href="index.html">SK<span class="dot">.</span></a>
+    </div>
+
+    <nav class="nav-center" aria-label="Main navigation">
+      <ul class="nav-links" role="menubar">
+        <li role="none"><a role="menuitem" href="index.html">Home</a></li>
+        <li role="none"><a role="menuitem" href="projects.html">Projects</a></li>
+        <li role="none"><a role="menuitem" href="education.html">Education</a></li>
+        <li role="none"><a role="menuitem" href="achievements.html">Achievements</a></li>
+        <li role="none"><a role="menuitem" href="interests.html">Interests</a></li>
+        <li role="none"><a role="menuitem" href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="nav-right">
+      <a class="nav-resume-btn" href="Resume.pdf" target="_blank" rel="noopener">Resume</a>
+    </div>
+  </header>
+
+  <main id="main" class="container" style="padding-top:140px;">
+    <h1 class="section-heading">What I Do</h1>
+
+    <p class="muted" style="max-width:820px;">
+      I build practical AI products and polished user experiences — from data exploration and modeling to deployable ML systems and clean UI.  
+      My work focuses on reliable, production-minded solutions that combine <strong>machine learning, NLP, automation,</strong> and <strong>design</strong>.
+    </p>
+
+    <div class="services-grid" style="margin-top:18px; display:grid; gap:18px; grid-template-columns:repeat(auto-fit,minmax(280px,1fr));">
+      <!-- Data Science & ML -->
+      <article class="service-card" aria-labelledby="svc-ml">
+        <div class="service-ic" aria-hidden="true"><i class="fa-solid fa-brain"></i></div>
+        <h3 id="svc-ml">Data Science & ML</h3>
+        <p>
+          End-to-end model work: EDA, feature engineering, modeling, evaluation, and deployment. I build reproducible pipelines and production-ready models for forecasting, classification, and recommendation.
+        </p>
+        <ul>
+          <li>Time series forecasting & signal modelling</li>
+          <li>Classification / regression / model explainability</li>
+          <li>NLP, transformers, BERT, and Retrieval-Augmented-Generation (RAG)</li>
+        </ul>
+        <p style="margin-top:8px;font-size:.95rem;color:var(--slate-text);">Tech: Python, NumPy, Pandas, Scikit-learn, TensorFlow.</p>
+      </article>
+
+      <!-- Web & UI/UX -->
+      <article class="service-card" aria-labelledby="svc-web">
+        <div class="service-ic" aria-hidden="true"><i class="fa-solid fa-code"></i></div>
+        <h3 id="svc-web">Web & UI/UX</h3>
+        <p>
+          I design and implement interfaces that make models and dashboards approachable — from prototype to production. Emphasis on performance, clarity and accessibility.
+        </p>
+        <ul>
+          <li>Production-friendly HTML/CSS/JS</li>
+          <li>Interactive dashboards & visualizations</li>
+          <li>Figma-driven UI systems & component libraries</li>
+        </ul>
+        <p style="margin-top:8px;font-size:.95rem;color:var(--slate-text);">Tools: Streamlit, Tableau, Power BI, Figma, Framer.</p>
+      </article>
+
+      <!-- Creative Content -->
+      <article class="service-card" aria-labelledby="svc-creative">
+        <div class="service-ic" aria-hidden="true"><i class="fa-solid fa-pen-nib"></i></div>
+        <h3 id="svc-creative">Creative Content</h3>
+        <p>
+          Visual storytelling and assets to support learning, marketing, and product design. I produce photo edits, posters, and presentation-ready materials that communicate data clearly.
+        </p>
+        <ul>
+          <li>Photo editing, retouching & color grading</li>
+          <li>Marketing & social media assets</li>
+          <li>Presentation and report design</li>
+        </ul>
+        <p style="margin-top:8px;font-size:.95rem;color:var(--slate-text);">Tools: Photoshop, Canva, Lightroom.</p>
+      </article>
+    </div>
+
+    <section style="margin-top:28px;">
+      <div style="background: rgba(255,177,100,0.06); padding:16px; border-radius:12px;">
+        <h4 style="margin:0 0 8px 0;">Interested in collaborating?</h4>
+        <p style="margin:0;">
+          Share a brief on the <a href="contact.html">contact page</a> or email directly — <a href="mailto:suryakiranaeila@gmail.com">suryakiranaeila@gmail.com</a>.  
+          I respond quickly to concrete briefs and collaboration requests.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <p>Designed &amp; Built by Ayila Surya Kiran • &copy; 2025</p>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+  <script>
+    // small fallback: set active nav link and aria-current for non-JS-aware servers
+    (function() {
+      const links = document.querySelectorAll('.nav-links a');
+      const file = location.pathname.split('/').pop() || 'index.html';
+      links.forEach(a => {
+        const href = (a.getAttribute('href') || '').split('/').pop();
+        if (href === file) {
+          a.classList.add('active');
+          a.setAttribute('aria-current', 'page');
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
