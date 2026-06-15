@@ -1,9 +1,71 @@
-# Portfolio
-#**About Me**
-I’m **Surya Kiran Ayila** — a **data scientist, UI/UX designer, photographer, and creative problem-solver** driven by curiosity and innovation. My work lives at the intersection of **technology, design, and storytelling**, where I combine analytical precision with a strong aesthetic sense to create solutions that are both functional and visually engaging.
+# 👋 Hi, I'm Surya Kiran Ayila
 
-With a foundation in **AI, machine learning, and data science**, I enjoy transforming raw data into meaningful insights, interactive experiences, and intuitive interfaces. My creative side is fueled by photography, visual design, and game development, while my technical side thrives on building efficient systems, experimenting with AI agents, and deploying practical applications across platforms.
+**AI & Data Science Engineer • UI/UX Designer • Photographer • Creative Technologist**
 
-I believe in **learning by building** — from designing tailored job-preparation tools like *Know2Grow*, to exploring futuristic concepts in UI/UX, to creating portfolio projects that push both technical and artistic boundaries. My interests extend beyond the screen, into **space exploration, travel, and immersive storytelling**, constantly inspiring me to think bigger and design for the future.
+I build intelligent systems and immersive digital experiences at the intersection of **artificial intelligence, data science, design, and storytelling**.
 
-I aim to craft work that doesn’t just **solve problems** but also **sparks curiosity**, making technology feel approachable, human, and exciting.
+Driven by curiosity and a passion for innovation, I transform complex ideas into solutions that are both **functional and visually engaging**.
+
+---
+
+## 🚀 What I Do
+
+* 🤖 Build AI, Machine Learning, and Data Science applications
+* 🧠 Experiment with LLMs, AI agents, RAG systems, and Generative AI workflows
+* 🎨 Design intuitive user experiences and interactive interfaces
+* 📸 Capture stories through photography and visual design
+* 🎮 Explore creative coding and game development
+* 🌌 Draw inspiration from space, travel, and emerging technologies
+
+---
+
+## 🛠️ Tech Stack
+
+**Languages:** Python, JavaScript, SQL, C++, Java
+
+**AI & Data Science:** Machine Learning, Deep Learning, NLP, Computer Vision, Generative AI, RAG, AI Agents
+
+**Frameworks & Tools:** TensorFlow, PyTorch, Scikit-learn, LangChain, FastAPI, Streamlit, Docker, Git
+
+**Design:** Figma, Adobe Creative Suite, UI/UX Design, Prototyping
+
+---
+
+## 🌟 Featured Projects
+
+* **Know2Grow** — Personalized job preparation and career guidance platform
+* **AI Agents & RAG Systems** — Building privacy-first, context-aware AI assistants
+* **Data Science Projects** — Transforming data into actionable insights and visualizations
+* **Creative Interfaces** — Designing experiences that blend usability with storytelling
+
+---
+
+## 💡 My Approach
+
+I believe in **learning by building**.
+
+Every project is an opportunity to explore new ideas, challenge assumptions, and create technology that feels approachable, human, and impactful.
+
+My goal is not only to solve problems but also to spark curiosity and inspire meaningful experiences.
+
+---
+
+## 🌍 Beyond Tech
+
+When I'm not building, you'll find me exploring:
+
+* 📷 Photography
+* 🚀 Space and future technologies
+* ✈️ Travel and new experiences
+* 🎬 Visual storytelling
+* 🎮 Interactive experiences
+
+---
+
+## 📫 Let's Connect
+
+I'm always open to collaborating on projects related to:
+
+**AI • Data Science • Generative AI • Machine Learning • Creative Technology**
+
+⭐ If you find my work interesting, feel free to explore my repositories and connect with me.
